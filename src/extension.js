@@ -67,7 +67,9 @@ export default class TransparentTopBarExtension extends Extension {
     }
 
     _updateTransparent() {
-        if (Main.panel.has_style_pseudo_class('overview') || !Main.sessionMode.hasWindows) {
+        this._setTransparent(true);
+
+        /*if (Main.panel.has_style_pseudo_class('overview') || !Main.sessionMode.hasWindows) {
             this._setTransparent(true);
             return;
         }
@@ -95,7 +97,7 @@ export default class TransparentTopBarExtension extends Extension {
             return verticalPosition < panelBottom + 5 * scale;
         });
 
-        this._setTransparent(!isNearEnough);
+        this._setTransparent(!isNearEnough);*/
     }
 
     _setTransparent(transparent) {
